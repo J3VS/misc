@@ -5,7 +5,9 @@
 (defn all-grid-numbers
   "A list of all numbers in the grid"
   [grid-size]
-  (range 1 (inc (* grid-size grid-size))))
+  (->> (* grid-size grid-size)
+       inc
+       (range 1)))
 
 (defn append-node
   "Explodes the path by generating up to 9 new combinations
