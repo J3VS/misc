@@ -41,8 +41,8 @@
     0))
 
 (defn total-valid-combinations
-  "Gets all possible valid paths in the grid from size 2 to `max-size`"
-  [grid-size length]
+  "Gets all possible valid paths in the grid from size 2 to `max-length`"
+  [grid-size max-length]
   (->> (initial-valid-combinations grid-size)
        (reduce (fn [acc path]
-                 (+ acc (count-paths grid-size length path))) 0)))
+                 (+ acc (count-paths grid-size max-length path))) 0)))
