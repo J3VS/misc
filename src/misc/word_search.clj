@@ -50,9 +50,18 @@
        (reduce (fn [acc s]
                  (+ acc (matches word s))) 0)))
 
+(defn palindrome?
+  "Returns whether a word is a palindrome"
+  [word]
+  (= word (string/reverse word)))
+
 (defn count-words-in-matrix
   "Counts the number of times the word is found in the matrix"
-  [grid word]
+  [grid word & {:keys [count-palindromes-once] :or {count-palindromes-once false}}]
   (if (= (count word) 1)
     (find-letter grid word)
-    (find-word grid word)))
+    (cond->> (find-word grid word)
+      ;; If we don't want palindromes to be counted twice (forwards and backwards)
+      ;; half the number here
+      (and count-palindromes-once (palindrome? word))
+      (/ 2))))

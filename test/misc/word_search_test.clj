@@ -19,4 +19,6 @@
   (is (= 2 (ws/count-words-in-matrix mat "BUZZ")))
   (is (= 0 (ws/count-words-in-matrix mat "CLOJURE")))
   (is (= 0 (ws/count-words-in-matrix mat "COWABUNGA")))
-  (is (= 4 (ws/count-words-in-matrix mat "Z"))))
+  (is (= 4 (ws/count-words-in-matrix mat "Z")))
+  (is (= 2 (ws/count-words-in-matrix mat "MUM")))
+  (is (= 1 (ws/count-words-in-matrix mat "MUM" :count-palindromes-once true))))
