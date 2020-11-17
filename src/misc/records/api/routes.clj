@@ -8,7 +8,6 @@
             [ring.util.http-response :refer [ok not-found]])
   (:import (clojure.lang ExceptionInfo)))
 
-
 (defn insert-record-handler
   "Handler for inserting a record"
   [request]
