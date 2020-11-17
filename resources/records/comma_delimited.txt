@@ -1,0 +1,6 @@
+romanoff,natasha,f,black,1962-04-15
+banner,bruce,m,green,1978-08-20
+maximoff,wanda,f,scarlet,1988-12-01
+stark,tony,m,gold,1971-02-25
+,shuri,f,yellow,1992-01-01
+rogers,steve,m,blue,1918-07-04
