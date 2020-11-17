@@ -1,9 +1,9 @@
 (ns misc.records.data.validation
   (:require [clojure.spec.alpha :as s]
-            [clj-time.format :as f]))
+            [clj-time.format :as f]
+            [misc.records.utils :as u]))
 
-(def formatter (f/formatter "yyyy-MM-dd"))
-(defn valid-date? [s] (try (f/parse formatter s) (catch IllegalArgumentException _ false)))
+(defn valid-date? [s] (try (u/parse-birthdate s) (catch IllegalArgumentException _ false)))
 
 (s/def ::first-name string?)
 (s/def ::last-name string?)
@@ -26,7 +26,7 @@
   (case in
     (:first-name :last-name :favorite-color) "must be a string"
     :gender "must be 'm' or 'f'"
-    :birthdate "must be of the form YYYY-mm-dd"))
+    :birthdate "must be of the form mm/dd/yyyy"))
 
 (defn transform-problem
   [[in problems]]

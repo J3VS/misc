@@ -1,6 +1,6 @@
-grey|jean|f|red|1971-04-11
-howlett|james|m|yellow|1894-01-15
-rarkhölme|raven|f|blue|1901-03-04
-d'ancanto|marie|f|white|1989-11-06
-xavier|charles|m|black|1932-09-09
-munroe|ororo|f|gray|1954-03-25
+grey|jean|f|red|04/11/1971
+howlett|james|m|yellow|01/15/1894
+rarkhölme|raven|f|blue|03/04/1901
+d'ancanto|marie|f|white|11/06/1989
+xavier|charles|m|black|09/09/1932
+munroe|ororo|f|gray|03/25/1954
