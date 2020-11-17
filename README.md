@@ -1,7 +1,7 @@
 # misc
 
-###Records
-####API
+### Records
+#### API
 To start the API
 ```
 lein records-api
@@ -32,7 +32,7 @@ favoriteColor - must be a string
 birthdate - must be in the format 'mm/dd/yyyy'
 ```
 
-####CLI
+#### CLI
 To parse and print out the records in a file, use
 ```
 lein records-cli -f <path-to-file> -s <sort> 
