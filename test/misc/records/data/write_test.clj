@@ -12,9 +12,9 @@
 
 (defn set-up-files
   []
-  (spit comma-file "smith,daniel,m,red,1974-08-12\nwhite,betty,f,white,1932-11-10\njones,gabby,f,blue,2000-01-01" :append false)
-  (spit pipe-file "gibson|maggie|f|blue|1993-02-16\nbolton|james|m|yellow|1987-11-21" :append false)
-  (spit space-file "jenkins barry m turquoise 1955-02-25" :append false))
+  (spit comma-file "smith,daniel,m,red,08/12/1974\nwhite,betty,f,white,11/10/1932\njones,gabby,f,blue,01/01/2000" :append false)
+  (spit pipe-file "gibson|maggie|f|blue|02/16/1993\nbolton|james|m|yellow|11/21/1987" :append false)
+  (spit space-file "jenkins barry m turquoise 02/25/1955" :append false))
 
 (defn clear-files
   []
@@ -38,90 +38,90 @@
              :first-name "barry"
              :gender "m"
              :favorite-color "turquoise"
-             :birthdate "1955-02-25"}]
+             :birthdate "02/25/1955"}]
            (read/read-all space-reader)))
     (is (= [{:last-name "smith"
              :first-name "daniel"
              :gender "m"
              :favorite-color "red"
-             :birthdate "1974-08-12"}
+             :birthdate "08/12/1974"}
             {:last-name "white"
              :first-name "betty"
              :gender "f"
              :favorite-color "white"
-             :birthdate "1932-11-10"}
+             :birthdate "11/10/1932"}
             {:last-name "jones"
              :first-name "gabby"
              :gender "f"
              :favorite-color "blue"
-             :birthdate "2000-01-01"}
+             :birthdate "01/01/2000"}
             {:last-name "gibson"
              :first-name "maggie"
              :gender "f"
              :favorite-color "blue"
-             :birthdate "1993-02-16"}
+             :birthdate "02/16/1993"}
             {:last-name "bolton"
              :first-name "james"
              :gender "m"
              :favorite-color "yellow"
-             :birthdate "1987-11-21"}
+             :birthdate "11/21/1987"}
             {:last-name "jenkins"
              :first-name "barry"
              :gender "m"
              :favorite-color "turquoise"
-             :birthdate "1955-02-25"}]
+             :birthdate "02/25/1955"}]
            (read/read-all reader)))
     (write/write writer {:first-name "jessica"
                          :last-name "maple"
                          :gender "f"
                          :favorite-color "taupe"
-                         :birthdate "1972-11-26"})
+                         :birthdate "11/26/1972"})
 
     (is (= [{:last-name "smith"
              :first-name "daniel"
              :gender "m"
              :favorite-color "red"
-             :birthdate "1974-08-12"}
+             :birthdate "08/12/1974"}
             {:last-name "white"
              :first-name "betty"
              :gender "f"
              :favorite-color "white"
-             :birthdate "1932-11-10"}
+             :birthdate "11/10/1932"}
             {:last-name "jones"
              :first-name "gabby"
              :gender "f"
              :favorite-color "blue"
-             :birthdate "2000-01-01"}
+             :birthdate "01/01/2000"}
             {:last-name "gibson"
              :first-name "maggie"
              :gender "f"
              :favorite-color "blue"
-             :birthdate "1993-02-16"}
+             :birthdate "02/16/1993"}
             {:last-name "bolton"
              :first-name "james"
              :gender "m"
              :favorite-color "yellow"
-             :birthdate "1987-11-21"}
+             :birthdate "11/21/1987"}
             {:last-name "jenkins"
              :first-name "barry"
              :gender "m"
              :favorite-color "turquoise"
-             :birthdate "1955-02-25"}
+             :birthdate "02/25/1955"}
             {:first-name "jessica"
              :last-name "maple"
              :gender "f"
              :favorite-color "taupe"
-             :birthdate "1972-11-26"}]
+             :birthdate "11/26/1972"}]
            (read/read-all reader)))
     (is (= [{:last-name "jenkins"
              :first-name "barry"
              :gender "m"
              :favorite-color "turquoise"
-             :birthdate "1955-02-25"}
+             :birthdate "02/25/1955"}
             {:first-name "jessica"
              :last-name "maple"
              :gender "f"
              :favorite-color "taupe"
-             :birthdate "1972-11-26"}]
+             :birthdate "11/26/1972"}]
            (read/read-all space-reader)))))
 

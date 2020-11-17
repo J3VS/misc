@@ -27,12 +27,12 @@
                           :last-name "must be a string"
                           :gender "must be 'm' or 'f'"
                           :favorite-color "must be a string"
-                          :birthdate "must be of the form YYYY-mm-dd"}
+                          :birthdate "must be of the form mm/dd/yyyy"}
                          (check {:first-name 1
                                  :last-name 3
                                  :gender "b"
                                  :favorite-color 4.5
-                                 :birthdate "24-01-1988"})))
+                                 :birthdate "1998-04-26"})))
 
 (deftest test-valid-fields
   "test valid fields"
@@ -40,4 +40,4 @@
                     :last-name "parker"
                     :gender "m"
                     :favorite-color "red"
-                    :birthdate "2020-01-24"}))))
+                    :birthdate "01/24/2020"}))))

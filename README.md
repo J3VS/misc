@@ -29,7 +29,7 @@ firstName- must be a string
 lastName - must be a string
 gender - must be 'm' or 'f'
 favoriteColor - must be a string
-birthdate - must be in the format 'YYYY-mm-dd'
+birthdate - must be in the format 'mm/dd/yyyy'
 ```
 
 ####CLI
